@@ -54,7 +54,7 @@
             </div>
             <!-- === Simple results === -->
 
-            <div id="search-song-list" class="search-result col-md-8 mx-auto py-4">
+            <div id="search-song-list" class="search-result col-md-11 mx-auto py-4">
                 <!-- single result -->
                 <!-- <div class="single-result row align-items-center my-3 p-3">
                     <div class="col-md-9">
@@ -128,14 +128,19 @@
                         <h3 class="lyrics-name">${song.album.title}</h3>
                         <p class="author lead">Album by <span>${song.artist.name}</span></p>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <audio controls style="width:245px !important">
                            
                             <source src="${song.preview}" type="audio/mpeg">
                             Your browser does not support the audio element.
                             </audio>
                     </div>
-                    <div class="col-md-3 text-md-right text-center">
+                    <div class="col-md-2  text-center">
+                    
+                            <img class="rounded-circle " id="weather-icon" src="${song.artist.picture_small}" alt="">
+                    </div>
+                    
+                    <div class="col-md-2 text-md-right text-center">
                         <button class="btn btn-success" onclick="getLyrics('${song.artist.name}', '${song.title}')">Get Lyrics</button>
                     </div>
                 </div>`
